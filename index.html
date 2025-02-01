@@ -6,22 +6,32 @@
     <title>Intro to tailwind css</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3f1e48d348.js" crossorigin="anonymous"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <header class="bg-[linear-gradient(180deg,_rgb(255,255,255),_rgb(239,235,227))] p-10 text-black">
-        <nav class="mt-2 font-['Sora',_sans-serif]">
-        <div class="flex justify-around">
 
-            <div><img src="./assets/logo-header.png" alt=""></div>
+</head>
+<body class="mr-0 max-[417px]: mr-0">
+    <!--responsive only for iphone-13 &14.. My responsive screen size: max-[576px]-->
+    
+    <header class="bg-[linear-gradient(180deg,_rgb(255,255,255),_rgb(239,235,227))] p-10 text-black max-[576px]: ml-5"> 
+        <nav class="mt-2 font-['Sora',_sans-serif]  max-[576px]:border border-green-400 w-390 h-20 mt-0 text-green">
+        <div class="flex justify-around ">
+
+            <div class="max-[576px]:hidden"><img src="./assets/logo-header.png" alt=""></div>
+            
+
+                <div class="min-[577px]:hidden max-[576px]:align-start h-48 w-48 ml-0 mt-5"><img src="./assets/Group.png" alt=""></div>
+                <div class="min-[577px]:hidden max-[576px]:align-end text-green mr-0 mt-8"><i class="fa-solid fa-bars"></i></div>
+            
             <div>
-                <ul class="flex justify-between gap-4 mt-5 font-medium">
+                <ul class="flex justify-between gap-4 mt-5 font-medium max-[576px]:hidden">
                     <li><a href="product.html">Product</a></li>
                     <li><a href="service.html">Services</a></li>
                     <li><a href="contuct.html">Contact us</a></li>
                 </ul>
             </div>
-            <div class="flex justify-between gap-4 ">
+            <div class="flex justify-between gap-4 max-[576px]:hidden">
                 <i class="fa-solid fa-magnifying-glass mt-5"></i>
                 <i class="fa-solid fa-cart-shopping mt-5"></i>
                 <button class="box-border size-22 border-4 p-2 border-green-600 rounded-[0.5vw] mx-2">
@@ -37,7 +47,7 @@
     <div>
 
         <div>
-            <h1 class="text-6xl text-center mt-20 font-semibold font-['Sora',_sans-serif]">
+            <h1 class="text-6xl text-center mt-20 font-semibold font-['Sora',_sans-serif] animate-bounce">
                 <span>Freshness </span>
                 <span class="text-[rgb(23,152,0)]">You Can</span>
                 <br>
@@ -49,22 +59,21 @@
           </div> 
              <div class="flex justify-center items-center mt-55">
                 <img src="./assets/hero-vegetables.png" class="w-full max-w-4xl h-auto" alt="">
-             </div> 
-            
+             </div>            
     </div>
     </header>
 
     <main>
-        <section class="font-['Sora',_sans-serif] ">
+        <section class="font-['Sora',_sans-serif] max-[576px]:ml-0 mr-0">
             <div class="ml-20 mt-20 mr-20 bg-white">
            <div class="ml-0 ">
-            <h1 class="text-4xl text-left font-semibold text-[rgb(23,152,0)]">Services</h1>
+            <h1 class="text-4xl text-left font-semibold text-[rgb(23,152,0)]  ">Services</h1>
            </div>
-           <div class="w-30 h-30 flex gap-x-10 gap-y-8 justify-between mt-10">
+           <div class="w-30 h-30 grid grid-cols-3 gap-x-10 gap-y-8 justify-between mt-10  max-[576px]:grid-cols-1">
 
-            <div class="h-50 w-50 bg-[rgb(239,235,227)] rounded-xl">
+            <div class="h-50 w-50 bg-[rgb(239,235,227)] rounded-xl max-[576px]: ml-0 w-80 h-50">
                 <div class="flex items-center justify-center mt-7">
-                    <div class="w-32 h-32 bg-cover bg-center rounded-full border-4 border-white bg-white" style="background-image: url('./assets/\/service.png');"></div>
+                    <div class="w-32 h-32 bg-cover bg-center rounded-full border-4 border-white bg-white" style="background-image: url('./assets/service.png');"></div>
                   </div>
                 <div class="">
                     <h1 class="text-2xl font-semibold text-center mt-10">24/7 Services</h1>
@@ -74,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="h-50 w-50 bg-[rgb(239,235,227)] rounded-xl">
+            <div class="h-50 w-50 bg-[rgb(239,235,227)] rounded-xl max-[576px]: ml-0 w-80 h-50">
                 <div class="flex items-center justify-center mt-7">
                     <div class="w-32 h-32 bg-cover bg-center rounded-full border-4 border-white bg-white" style="background-image: url('./assets/delivery.png');"></div>
                   </div>
@@ -86,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="h-50 w-50 bg-[rgb(239,235,227)] rounded-xl">
+            <div class="h-50 w-50 bg-[rgb(239,235,227)] rounded-xl max-[576px]: ml-0 w-80 h-50">
                 <div class="flex items-center justify-center mt-7">
                     <div class="w-32 h-32 bg-cover bg-center rounded-full border-4 border-white bg-white" style="background-image: url('./assets/healthy.png');"></div>
                   </div>
@@ -100,16 +109,16 @@
            </div>
         </div>
         </section>
-<header>
+
         <section class="font-['Sora',_sans-serif] bg-[rgb(239,235,227)] h-70">
             <div class="ml-20 mr-20 mt-20 mb-20 bg-[rgb(239,235,227)]">
             <div class="ml-6 mt-2">
                 <h1 class="text-4xl  font-semibold text-[rgb(23,152,0)]"><span>Popular Products</span></h1>
             </div>
 
-            <div class="flex justify-start align-start ">
+            <div class="grid grid-cols-2 max-[576px]:grid-cols-1">
 
-                <div class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%] rounded-xl item-left ml-10 mb-20 mt-20 mr-50 ">
+                <div class="bg-gradient-to-br from-green-500 to-[#EFEBE3] rounded-xl item-left ml-10 mb-20 mt-20 mr-20 ">
     
                       <div class="ml-10">
                         <h1 class="text-2xl font-semibold text-white text-left mt-10">30% off</h1>
@@ -130,13 +139,12 @@
                       </div>
 
                 </div>
-            
 
-                <div class="grid grid-cols-3 gap-8 ml-10 mr-20 mt-20 mb-20 ">
-                    <div class="bg-white p-4 flex justify-between rounded-xl  ">
-                        <div class="mr-4"> <img src="./assets/onion.png" alt=""></div>
+                <div class="grid grid-cols-3 gap-8 ml-20 mr-20 mt-20 mb-20 max-[576px]:grid-cols-2  ">
+                    <div class="bg-white p-4 grid grid-cols-3 rounded-xl max-[576px]:grid-cols-2">
+                        <div class="mr-4 "> <img src="./assets/onion.png" alt=""></div>
                         <div>
-                            <div class="flex">
+                            <div class="flex ">
                             <i class="fa-solid fa-star"></i>
                             <h1>4.5</h1>
                             </div>
@@ -238,15 +246,15 @@
             </div>
         </div>
         </section>
-    </header>
+
 
 
         <section class="font-['Sora',_sans-serif] ">
-            <div class="flex ml-20">
+            <div class="flex ml-20 max-[576px]:ml-0">
                 <h1 class="text-4xl text-left font-semibold text-[rgb(23,152,0)]">Arrival & Offers</h1>
             </div>
-            <div class="flex justify-center gap-6 mt-20 mb-20">
-            <div  class="p-6 rounded-lg flex items-center justify-between relative text-white bg-green-900 rounded-[0.5vw] mx-150">
+            <div class=" grid grid-cols-2 gap-6 mt-20 mb-20 ml-20 mr-20 max-[576px]:grid-cols-1 ">
+            <div  class="p-6 rounded-lg grid grid-cols-2 relative text-white bg-green-900 rounded-[0.5vw] -mr-12 max-[576px]:grid-cols-1">
                 <div>
                    <div class="mt-0"> <img class="" src="./assets/dawat-logo.png" alt=""></div>
                     <div class="mt-10"><button class="box-border size-26 border-4 border-green-400 bg-green-400 p-2 rounded-[1vw] ">
@@ -257,15 +265,13 @@
                     <h1 class="text-4xl font-norma">UP to <span class="font-bold">20% OFF</span></h1>
                     </div>
                 </div>
-
-
-                <div>
+               <div>
                     <img src="./assets/dawat-mock-up.png" alt="">
                 </div>
             </div>
 
-            <div  class="p-6 rounded-lg flex items-center justify-between relative text-white bg-blue-900 rounded-[0.5vw] flex ml-100">
-                <div>
+            <div  class="p-4 rounded-lg flex items-center justify-between relative text-white bg-blue-900 rounded-[0.5vw]  ml-20 mr-0 max-[576px]:ml-0 w-y-80">
+                <div >
                     <div class="mt-0"> <img class="ml-2" src="./assets/india-gate-logo.png" alt=""></div>
                      <div class="mt-5"><button class="box-border size-26 border-4 border-blue-600 bg-blue-600 p-2 rounded-[1vw] ">
                          <span class="text-2xl text-white mx-5">World's No.1 Rice</span>
@@ -284,37 +290,119 @@
         </div>
 
         </section>
+        <section>
+
+            <div class=" mb-60">
+      
+                <div class=" relative flex ml-20">
+                    <h1 class="text-4xl text-left font-semibold text-[rgb(23,152,0)]">Contact Us</h1>
+                </div>
+    
+                <div class="grid grid-cols-2 mb-20 max-[576px]:grid-cols-1 ">
+                    
+                    <div class="p-10 ml-20 mt-20 mr-10 rounded-xl animate-pulse"> <img src="./assets/blog.webp" alt=""></div>
+                    
+                    <div class="bg-gradient-to-br from-green-500 to-[#EFEBE3] rounded-xl item-left ml-20 mt-20 mr-10 mb-15 ">
+                <h2 class="text-4xl text-center mt-20  animate-bounce">Please fill up the form</h2>
+                <form >
+                    <br>
+                    <br>
+                    <label  class=" ml-10" for="name">Your Name :
+                        <input id="name" type="text" placeholder="Your name">
+                    </label>
+                    <br>
+                    <br>
+                    <label class=" ml-10" for="">Your Email  :
+                        <input type="text" placeholder="Your Email">
+                    </label>
+                    <br>
+                    <br>
+                    <label class=" ml-10" for="">Contact No :
+                        <input type="text" placeholder="Your Email">
+                    </label>
+                    <br>
+                    <br>
+                    <fieldset class=" ml-10">
+                        <legend>Cetagory :</legend>
+                        <label for="Normal">
+                            <input type="radio" name="normal" id="normal">Normal
+                        </label> 
+                        <br>
+                        <label for="emergency">
+                            <input type="radio" name="emergency" id="emergency">Emergency
+                        </label>
+                    </fieldset>
+                    <br>
+                    <fieldset class=" ml-10">
+                        <legend>Message :</legend>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                        <input type="reset" value="">
+                    </fieldset>
+                    <br>
+                    <div class=" ml-0 flex justify-around ">
+                    <input class="box-border size-22 border-4 border-green-600 bg-green-600 p-2 rounded-[0.5vw] font-medium text-white mx-5 mb-5" type="reset" value="Reset">
+                    <input class="box-border size-22 border-4 border-green-600 bg-green-600 p-2 rounded-[0.5vw] font-medium text-white mx-5 mb-5 " type="submit" value="Submit">                   
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </section>
     </main>
 
-    <footer class="font-['Sora',_sans-serif]  text-white">
-        <div  class="flex justify-around bg-[rgb(23,152,0)]">
+    <footer class="relative font-['Sora',_sans-serif] " >
+    <div class=" absolute grid grid-cols-2 mt-20 bg-[rgb(239,235,227)] ml-40 mr-0 mb-20 -top-1/2 rounded-2xl max-[517px]:grid-cols-1 max-[517px]:ml-5 mr-5 -top-1/2 max-[517px]:text-centre">
 
-            <div>
+        <div class="ml-20 "><img src="./assets/vegetable-busket.png" alt=""></div>
+    
+        <div class="mt-20">
+    
+        <h1 class="text-4xl text-left font-semibold max-[417px]:text-[rgb(23,152,0)]">Get Grocery News!</h1>
+        <br>
+        <p class="text-xl">Exclusive training tips, ticks, product deals and more.</p>
+        <br>
+        <label class="" for="">
+            <input class="box-content w-y-20 border-4 p-4 rounded-xl ml-0 flex justify-start" type="e-mail" placeholder="Enter Email....">
+        </label>
+        <br>
+     
+        <button class="box-border size-22 border-4 border-green-600 bg-green-600 p-2 rounded-[0.5vw] mb-10">
+            <span class="font-medium text-white mx-5  ">Subscribe</span>
+        </button>
+    </div>
+    </div>
+
+
+        <div  class="  bg-[rgb(23,152,0)] text-white ">
+            <div class=" grid grid-cols-3 h-[550px] max-[576px]:grid-cols-1 h-[280px]">
+            <div class="ml-20 mt-60">
                 <img src="./assets/logo-footer.png" alt="">
                 <p>Discover a world of treats, toys, and<br>essentials handpicked for your furry<br>friends</p>
 
             </div>
 
-            <div>
-                <ul class=" gap-4 mt-5 font-medium">
+            <div class="ml-20">
+                <ul class=" gap-6 mt-60 font-medium">
                     <li><a href="product.html">Product</a></li>
                     <li><a href="service.html">Services</a></li>
                     <li><a href="contuct.html">Contact us</a></li>
                 </ul>
             </div>
 
-            <div>
-                <h1>Follow Us</h1>
-                <div class="flex justify-around">
+            <div class="ml-20 ">
+                <h1 class="mt-60">Follow Us</h1>
+                <div class="flex gap-4 mt-65">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-youtube"></i>
                 </div>
             </div>
-
+            </div>
 
         </div>
+
+
     </footer>
 </body>
-</html> 
+</html>
